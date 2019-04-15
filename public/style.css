@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgb(71, 68, 68);
+}
+
+.title {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h3 {
+    margin: 0;
+    padding: 0;
+    color:rgb(34, 126, 118);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.play2 {
+    
+    border-radius: 3px;
+    font-family: "Ubuntu", sans-serif;
+    background-color: #ffffffc2;
+}
+
+.container
+{
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    
+    
+}
+
+.container .box
+{
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    background: #fff;
+    padding: 20px 40px 40px;
+   
+}
+
+.container .box:nth-child(1) 
+{
+    background: linear-Gradient(45deg,#086d35,#00ff72);
+    padding: 10px;
+    
+}

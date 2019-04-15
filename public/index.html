@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pedra Papel Tesoura</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function generate(min, max, value) {
+            var p = max - min;
+            var x = Math.random() * p;
+            console.log('teste');
+            if (value == 1) {
+                if (x > 2) {
+                    document.getElementById("mensagem").innerHTML = "You chose Paper and won it from stone! Aww yiss!";
+                    document.getElementById("resultadoJogador").src="pa.png";
+                    document.getElementById("resultadoGerado").src="pe.png";
+                } else if (x > 1) {
+                    document.getElementById("mensagem").innerHTML = "Oh noez! You chose paper and lost it for scissors.";
+                    document.getElementById("resultadoJogador").src="pa.png";
+                    document.getElementById("resultadoGerado").src="t.png";
+                } else {
+                    document.getElementById("mensagem").innerHTML = "You chose paper and tied it with paper. Try again!";
+                    document.getElementById("resultadoJogador").src="pa.png";
+                    document.getElementById("resultadoGerado").src="pa.png";
+                }
+            } else if (value == 2) {
+                if (x > 2) {
+                    document.getElementById("mensagem").innerHTML = "That's great! You chose stone and won scissors!";
+                    document.getElementById("resultadoJogador").src="pe.png";
+                    document.getElementById("resultadoGerado").src="t.png";
+                } else if (x > 1) {
+                    document.getElementById("mensagem").innerHTML = "Oh noes! You chose stone and lost it for paper!";
+                    document.getElementById("resultadoJogador").src="pe.png";
+                    document.getElementById("resultadoGerado").src="pa.png";
+                } else {
+                    document.getElementById("mensagem").innerHTML = "You chose stone and tied it with stone. Try again!";
+                    document.getElementById("resultadoJogador").src="pe.png";
+                    document.getElementById("resultadoGerado").src="pe.png";
+                }
+            } else if (value == 3) {
+                if (x > 2) {
+                    document.getElementById("mensagem").innerHTML = "Aww yiss! You chose scissors and won paper!";
+                    document.getElementById("resultadoJogador").src="t.png";
+                    document.getElementById("resultadoGerado").src="pa.png";
+                } else if (x > 1) {
+                    document.getElementById("mensagem").innerHTML = "Oh noezz!! you chose scissors and lost to stone!";
+                    document.getElementById("resultadoJogador").src="t.png";
+                    document.getElementById("resultadoGerado").src="pe.png";
+                } else {
+                    document.getElementById("mensagem").innerHTML = "You chose scissors and tied with scissors. Try again!";
+                    document.getElementById("resultadoJogador").src="t.png";
+                    document.getElementById("resultadoGerado").src="t.png";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 class="title">Let's play Jokenpô!! </h1>
+            <h3>Choose your weapon:</h3>
+            <br />
+            <a href="javascript:void(0);" onclick="generate(0,3,1)">
+                <img src="pa.png" />
+            </a>
+            <a href="javascript:void(0);" onclick="generate(0,3,2)">
+                <img src="pe.png" />
+            </a>
+            <a href="javascript:void(0);" onclick="generate(0,3,3)">
+                <img src="t.png" />
+            </a>
+            <br />
+            <br />
+            <br />
+            <hr />
+            <br />
+            <br />
+            <br />
+
+            <h1 class="title" id="mensagem"></h1>
+            <br />
+            <img id="resultadoJogador" src="" />
+            <img id="resultadoGerado" src="" />
+        </div>
+    </div>
+</body>
+
+</html>
